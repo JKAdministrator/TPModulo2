@@ -15,7 +15,7 @@ function App() {
         <Route path="/register" element={<Register />}></Route>
         <Route path="/home" element={<Home />}></Route>
         <Route path="/product/:id" element={<Product />}></Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
     </>

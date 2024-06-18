@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jkadministrator.github.io/TPModulo2",
+  "homepage": "https://jkadministrator.github.io/TPModulo2/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
