@@ -16,9 +16,9 @@ function Login() {
         <section>
             <h1>Login</h1>
             <label htmlFor="username">Usuario:</label>
-            <input type="text" name="username" id="username" />
+            <input type="text" name="username" id="username" autoComplete='username'/>
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" autoComplete='password'/>
             <button type="button" className='primary' onClick={onLogin}>INGRESAR</button>
             <button type="button" className='secondary' onClick={onNoUserClick}>No tengo usuario...</button>
         </section>

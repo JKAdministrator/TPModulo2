@@ -14,11 +14,11 @@ function Register() {
         <section>
             <h1>Registro de usuario</h1>
             <label htmlFor="username">Usuario:</label>
-            <input type="text" name="username" id="username" />
+            <input type="text" name="username" id="username" autoComplete='username'/>
             <label htmlFor="password">Password:</label>
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" autoComplete='password'/>
             <label htmlFor="confirm-password">Confirmar password:</label>
-            <input type="password" name="confirm-password" id="confirm-password" />
+            <input type="password" name="confirm-password" id="confirm-password" autoComplete='password' />
             <button type="button" className='primary'>REGISTRAR</button>
             <button type="button" className='secondary' onClick={onHasUserClick}>Ya tengo usuario!</button>
         </section>
