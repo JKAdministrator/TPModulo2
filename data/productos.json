@@ -1,0 +1,28 @@
+
+[
+    
+    {
+        "nombre": "Camisa de algodón",
+      "descripcion": "Camisa de manga larga hecha de algodón suave y transpirable.",
+      "codigo": "TXL001",
+      "precio": 29.99
+    },
+    {
+        "nombre": "Bufanda de lana",
+      "descripcion": "Bufanda tejida a mano con lana merino de alta calidad para mayor calidez y suavidad.",
+      "codigo": "TXL002",
+      "precio": 19.95
+    },
+    {
+        "nombre": "Vestido de seda",
+      "descripcion": "Vestido elegante y ligero confeccionado en seda natural, ideal para ocasiones especiales.",
+      "codigo": "TXL003",
+      "precio": 89.50
+    },
+    {
+        "nombre": "Pantalones vaqueros",
+      "descripcion": "Pantalones vaqueros clásicos con ajuste regular y fabricados con denim resistente.",
+      "codigo": "TXL004",
+      "precio": 49.99
+    }
+]
