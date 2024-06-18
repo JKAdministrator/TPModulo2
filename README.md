@@ -1,11 +1,5 @@
 # Trabajo práctico del Módulo 2 (OBLIGATORIO)
 
-  - 404: https://jkadministrator.github.io/TPModulo2/asfad
-  - registro: https://jkadministrator.github.io/TPModulo2/register
-  - login: https://jkadministrator.github.io/TPModulo2/login
-  - home: https://jkadministrator.github.io/TPModulo2/login
-
-
 # Consigna
 
 Consigna:
