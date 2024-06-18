@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 
 import './Home.css'
 const importJson = async ()=>{
-    const response = await fetch('data/productos.json',{headers: {
+    const response = await fetch('./data/productos.json',{headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       }})
