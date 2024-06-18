@@ -1,0 +1,48 @@
+form.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form.home section {
+    width: 50vw;
+    max-width: 20rem;
+    height: max-content;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem ;
+    border: 1px solid whitesmoke;
+    gap: 1rem;
+    position: absolute;
+    background-color: white;
+}
+form.home section h1{
+    width: 100%;
+}
+form.home section label{
+    width: 100%;
+    text-align: left;
+}
+
+form.home section input{
+    width: 100%;
+    text-align: left;
+    padding: 0.2rem;
+}
+
+form.home img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+form.home select {
+    width: 100%;
+    padding: 0.2rem;
+}

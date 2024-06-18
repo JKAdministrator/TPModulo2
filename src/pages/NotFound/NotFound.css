@@ -1,0 +1,26 @@
+form.notFound {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+form.notFound section{
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    border: none;
+}
+form.notFound img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+form.notFound button{
+    margin-bottom: 1rem;
+}

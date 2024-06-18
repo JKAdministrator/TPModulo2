@@ -1,0 +1,41 @@
+form.login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form.login section {
+    width: 50vw;
+    height: max-content;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem ;
+    border: 1px solid whitesmoke;
+    gap: 1rem;
+    position: absolute;
+    background-color: white;
+}
+form.login h1{
+    width: 100%;
+}
+form.login label{
+    width: 100%;
+    text-align: left;
+}
+form.login img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+form.login input{
+    width: 100%;
+    text-align: left;
+    padding: 0.2rem;
+}

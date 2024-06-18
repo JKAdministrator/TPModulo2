@@ -1,0 +1,45 @@
+section.productCard {
+    position: absolute;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content:space-between;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: min-content;
+}
+section.productCard h1 {
+    width: 100%;
+    text-wrap: nowrap;
+}
+section.productCard label {
+    width: 40%;
+    text-align:left;
+}
+section.productCard input {
+    width: 40%;
+    border: none;
+}
+section.productCard textarea {
+    width: 100%;
+    border: none;
+    resize: none;
+    height: max-content;
+}
+section.productCard span#precio {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+}
+section.productCard span#precio:before {
+    content: '$';
+    content: "\0024";
+}
+section.productCard button {
+    width: 100%;
+}
