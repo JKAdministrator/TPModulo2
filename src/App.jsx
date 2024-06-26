@@ -9,14 +9,16 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+    <BrowserRouter basename="/TPModulo2">
       <Routes>
-        <Route path="/" element={<Login />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/product/:id" element={<Product />}></Route>
-        <Route path="/*" element={<NotFound />} />
+        
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/home" element={<Home />}></Route>
+          <Route path="/product/:id" element={<Product />}></Route>
+          <Route path="/*" element={<NotFound />} />
+   
       </Routes>
     </BrowserRouter>
     </>
