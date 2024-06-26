@@ -7,8 +7,6 @@ Link: https://jkadministrator.github.io/TPModulo2/
 
 # Consigna
 
-Consigna:
-
 Desarrollar un pequeño ecommerce con las siguientes paginas
 
 - Registro
