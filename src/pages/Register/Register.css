@@ -22,15 +22,15 @@ form.register section {
     position: absolute;
     background-color: white;
 }
-form.register section h1{
+form.register h1{
     width: 100%;
 }
-form.register section label{
+form.register label{
     width: 100%;
     text-align: left;
 }
 
-form.register section input{
+form.register input{
     width: 100%;
     text-align: left;
     padding: 0.2rem;
@@ -41,4 +41,26 @@ form.register img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+    form.register section {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        max-width: none;
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    form.register label{
+        width: 50%;
+        min-width: 10rem;    
+    }
+    form.register input{
+        width: 50%;
+        min-width: 10rem;
+    }
+    form.register img{
+        display: none;
+    }
 }

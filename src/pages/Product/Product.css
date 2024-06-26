@@ -13,3 +13,40 @@ form.product img{
     height: 100%;
     object-fit: cover;
 }
+form.product .productCard {
+    position: absolute;
+}
+
+@media only screen and (max-width: 1000px) {
+    form.product {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        max-width: none;
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-start;
+
+    }
+    form.product label{
+        width: 50%;
+        min-width: 10rem;    
+    }
+    form.product input{
+        width: 50%;
+        min-width: 10rem;
+    }
+    form.product img{
+        display: none;
+    }
+    form.product .productCard {
+        position: relative;
+        width: -webkit-fill-available;
+        height: 100%;
+        border: none;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+

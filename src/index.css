@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  max-width: none;
 }
 
 a {
@@ -28,8 +36,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
   padding: 0;
 }
 

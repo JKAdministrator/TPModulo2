@@ -22,15 +22,15 @@ form.home section {
     position: absolute;
     background-color: white;
 }
-form.home section h1{
+form.home h1{
     width: 100%;
 }
-form.home section label{
+form.home label{
     width: 100%;
     text-align: left;
 }
 
-form.home section input{
+form.home input{
     width: 100%;
     text-align: left;
     padding: 0.2rem;
@@ -45,4 +45,27 @@ form.home img{
 form.home select {
     width: 100%;
     padding: 0.2rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    form.home section {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        max-width: none;
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    form.home label{
+        width: 50%;
+        min-width: 10rem;    
+    }
+    form.home input{
+        width: 50%;
+        min-width: 10rem;
+    }
+    form.home img{
+        display: none;
+    }
 }

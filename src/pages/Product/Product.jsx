@@ -35,7 +35,7 @@ function Product() {
   return (
     <form action="" className='product'>
       <img src={backgroundImage} alt="background image" />
-      <ProductCard {...datosProducto}/>
+      <ProductCard {...datosProducto} className='productCard'/>
     </form>
   )
 }

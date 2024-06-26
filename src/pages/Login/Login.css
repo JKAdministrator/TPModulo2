@@ -8,7 +8,7 @@ form.login {
 }
 
 form.login section {
-    width: 50vw;
+    width: 20vw;
     height: max-content;
     display: flex;
     flex-flow: row;
@@ -21,11 +21,12 @@ form.login section {
     position: absolute;
     background-color: white;
 }
+
 form.login h1{
-    width: 100%;
+    width: -webkit-fill-available;
 }
 form.login label{
-    width: 100%;
+    width: -webkit-fill-available;
     text-align: left;
 }
 form.login img{
@@ -37,5 +38,26 @@ form.login img{
 form.login input{
     width: 100%;
     text-align: left;
-    padding: 0.2rem;
+    padding: 0.2rem; 
+}
+
+@media only screen and (max-width: 1000px) {
+    form.login section {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    form.login label{
+        width: 50%;
+        min-width: 10rem;    
+    }
+    form.login input{
+        width: 50%;
+        min-width: 10rem;
+    }
+    form.login img{
+        display: none;
+    }
 }
