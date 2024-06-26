@@ -1,6 +1,9 @@
 # Trabajo práctico del Módulo 2 (OBLIGATORIO)
 
-pagina: https://jkadministrator.github.io/TPModulo2/
+Link: https://jkadministrator.github.io/TPModulo2/
+
+# Bugs conocidos
+  - El acceso a la pagina de gihub es por la ruta _https://jkadministrator.github.io/TPModulo2/_ que lleva al _index.html_. Si se accede directamente a una ruta de forma directa (ej: colocando _https://jkadministrator.github.io/TPModulo2/home_ en la url del navegador y dandole _enter_ ), por la forma en la que se configura _github pages_ no se va a acceder al componente ya que interpreta que estamos tratando de ingresar a otra pagina. Para solucionar esto habria que configurar el servidor para que siempre redireccione al _index.html_ del root donde esta el proyecto o hacer un _404.html_ que redireccione a index.html automaticamente.
 
 # Consigna
 
