@@ -6,7 +6,6 @@ import {Login,Product, Register, Home, NotFound} from './pages/index'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App() {
   const [count, setCount] = useState(0)
-
   return (
     <>
     <BrowserRouter basename="/TPModulo2">

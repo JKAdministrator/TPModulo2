@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from '../../components/productCard/ProductCard'
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import backgroundImage from '/img/fondoProduct.jpg';
 import './Product.css'
 import { useNavigate } from 'react-router-dom'
+import LocationHeader from '../../components/locationHeader/LocationHeader';
 
 
 const importJson = async ()=>{
@@ -18,6 +19,7 @@ const importJson = async ()=>{
 
 
 function Product() {
+  const location = useLocation();
   let { id } = useParams();
   const  [datosProducto,setDatosProducto] = useState({
     nombre:'...'
@@ -33,10 +35,13 @@ function Product() {
     })
     },[])
   return (
-    <form action="" className='product'>
-      <img src={backgroundImage} alt="background image" />
-      <ProductCard {...datosProducto} className='productCard'/>
-    </form>
+    <>
+      <LocationHeader />
+      <form action="" className='product'>
+        <img src={backgroundImage} alt="background image" />
+        <ProductCard {...datosProducto} className='productCard'/>
+      </form>
+    </>
   )
 }
 

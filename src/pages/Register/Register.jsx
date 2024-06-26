@@ -2,13 +2,17 @@ import React from 'react'
 import './Register.css'
 
 import backgroundImage from '/img/fondoRegister.jpg';
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import LocationHeader from '../../components/locationHeader/LocationHeader';
 function Register() {
+  const location = useLocation();
   const navigate = useNavigate()
   const onHasUserClick = ()=> {
     navigate('/login');
   }
   return (
+    <>
+    <LocationHeader />
     <form action="" className='register'>
         <img src={backgroundImage} alt="background image" />
         <section>
@@ -23,6 +27,7 @@ function Register() {
             <button type="button" className='secondary' onClick={onHasUserClick}>Ya tengo usuario!</button>
         </section>
     </form>
+    </>
   )
 }
 

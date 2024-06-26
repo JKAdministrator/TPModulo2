@@ -2,6 +2,7 @@ import React from 'react'
 import './Login.css'
 import { useNavigate } from 'react-router-dom'
 import backgroundImage from '/img/fondoLogin.jpg';
+import LocationHeader from '../../components/locationHeader/LocationHeader';
 function Login() {
   const navigate = useNavigate()
   const onNoUserClick = ()=>{
@@ -11,6 +12,8 @@ function Login() {
     navigate('/home')
   }
   return (
+    <>
+    <LocationHeader />
     <form action="" className='login'>
         <img src={backgroundImage} alt="background image" />
         <section>
@@ -23,6 +26,7 @@ function Login() {
             <button type="button" className='secondary' onClick={onNoUserClick}>No tengo usuario...</button>
         </section>
     </form>
+    </>
   )
 }
 

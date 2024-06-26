@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import backgroundImage from '/img/fondoHome.jpg';
 import { useNavigate, useParams } from 'react-router-dom'
-
+import LocationHeader from '../../components/locationHeader/LocationHeader';
 import './Home.css'
 const importJson = async ()=>{
     const response = await fetch('data/productos.json',{headers: {
@@ -13,6 +13,7 @@ const importJson = async ()=>{
 }   
 
 function Home() {
+    
   const navigate = useNavigate()
   const  [productos,setProductos] = useState([])
   const  [productoSeleccionado,setProductoSeleccionado] = useState(null)
@@ -32,6 +33,8 @@ function Home() {
     setProductoSeleccionado(value)
  }
   return (
+    <>
+    <LocationHeader />
     <form action="" className='home'>
         <img src={backgroundImage} alt="background image" />
         <section>
@@ -44,6 +47,7 @@ function Home() {
             <button type='button' className='primary' onClick={handleOnProductSelected}>VER</button>
         </section>
     </form>
+    </>
   )
 }
 
