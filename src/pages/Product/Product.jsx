@@ -34,12 +34,15 @@ function Product() {
         else navigate('/404');
     })
     },[])
+  const handleVolverClick = (e)=>{
+    navigate('/home');
+  }
   return (
     <>
       <form action="" className='product-page'>
         <ProductCard {...datosProducto} className='productCard'/>
       </form>
-      <button type="button" className='product-page-volver'>Volver</button>
+      <button type="button" className='product-page-volver' onClick={handleVolverClick}>Volver</button>
     </>
   )
 }
