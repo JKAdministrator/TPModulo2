@@ -24,6 +24,7 @@ function ProductCard({codigo, nombre, descripcion, precio, color, genero, imagen
             </div>
           </div>
         </div>
+        <button type="button" className='product-buy'>COMPRAR</button>
       </div>
   )
 
