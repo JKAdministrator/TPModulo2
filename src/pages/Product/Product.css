@@ -1,24 +1,35 @@
-form.product {
+form.product-page {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    background-color: #c3c3c3;
 }
 
-form.product img{
+form.product-page img{
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-form.product .productCard {
+form.product-page .productCard {
     position: absolute;
 }
 
+.product-page-volver {
+    width: max-content;
+    height: max-content;
+    padding: 1rem;
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+
+
 @media only screen and (max-width: 1000px) {
-    form.product {
+    form.product-page {
         width: -webkit-fill-available;
         height: -webkit-fill-available;
         max-width: none;
@@ -27,18 +38,18 @@ form.product .productCard {
         justify-content: flex-start;
 
     }
-    form.product label{
+    form.product-page label{
         width: 50%;
         min-width: 10rem;    
     }
-    form.product input{
+    form.product-page input{
         width: 50%;
         min-width: 10rem;
     }
-    form.product img{
+    form.product-page > img{
         display: none;
     }
-    form.product .productCard {
+    form.product-page .productCard {
         position: relative;
         width: -webkit-fill-available;
         height: 100%;

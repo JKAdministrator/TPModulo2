@@ -1,71 +1,102 @@
-form.home {
+.home {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-flow: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-form.home section {
-    width: 50vw;
-    max-width: 20rem;
-    height: max-content;
+.home section {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 1rem ;
-    border: 1px solid whitesmoke;
+    padding: 0;
+    border: 0;
     gap: 1rem;
     position: absolute;
     background-color: white;
 }
-form.home h1{
+.home form {
     width: 100%;
+    padding: 0;
+    margin: 0;
+    height: 20vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
-form.home label{
+.home h1{
+    width: 80%;
+    text-align: left;
+    color: #0000006e;
+}
+.home label{
     width: 100%;
     text-align: left;
 }
 
-form.home input{
-    width: 100%;
+.home input{
+    width: 80%;
     text-align: left;
-    padding: 0.2rem;
+    font-size: 2rem;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid grey;
 }
 
-form.home img{
+.home img{
     position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-form.home select {
+.home select {
     width: 100%;
     padding: 0.2rem;
 }
+.home ul {
+    list-style-type: none;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: row;
+    max-height: 70vh;
+    overflow: auto;
+    padding: 1rem;
+    width: calc(100% - 2rem);
+    position: relative;
+    height: -webkit-fill-available;
+    box-sizing: unset;
+    
+scrollbar-width: thin;
+}
 
+.home button {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+}
 
-@media only screen and (max-width: 1000px) {
-    form.home section {
-        width: -webkit-fill-available;
-        height: -webkit-fill-available;
-        max-width: none;
-        flex-flow: column;
-        align-items: center;
-        justify-content: flex-start;
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-    form.home label{
-        width: 50%;
-        min-width: 10rem;    
-    }
-    form.home input{
-        width: 50%;
-        min-width: 10rem;
-    }
-    form.home img{
-        display: none;
-    }
+
+.home .imageContainer {
+    height: 74vh;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.home .imageContainer > img {
+    object-fit: scale-down;
 }

@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import backgroundImage from '/img/fondoHome.jpg';
-import { useNavigate, useParams } from 'react-router-dom'
-import LocationHeader from '../../components/locationHeader/LocationHeader';
+import React, { useEffect, useState, useRef } from 'react'
+import { useNavigate, useSearchParams } from "react-router-dom";
+
 import './Home.css'
+import ProductSmallCard from '../../components/productSmallCard/ProductSmallCard';
 const importJson = async ()=>{
     const response = await fetch('data/productos.json',{headers: {
         Accept: 'application/json',
@@ -12,43 +12,87 @@ const importJson = async ()=>{
     return datos
 }   
 
+const isTextInProduct = (producto, valorABuscar)=>{
+    const encontrado = producto.nombre.toUpperCase().search(valorABuscar.toUpperCase());
+    if(encontrado != -1) return true;
+    return false;
+}
+const getRandomInt =(max) =>{
+    return Math.floor(Math.random() * max);
+}
+const getRandomSizeClassname = (index)=>{
+    switch(getRandomInt(10)){
+        case 9 :{
+            return 'wide';
+        }
+        case 8:{
+            return 'tall';
+        }
+        default: {
+            return '';
+        }
+    }
+}
+
+
 function Home() {
-    
-  const navigate = useNavigate()
-  const  [productos,setProductos] = useState([])
-  const  [productoSeleccionado,setProductoSeleccionado] = useState(null)
+    const navigate = useNavigate();
+    const   [searchParams, setSearchParams]                 = useSearchParams();
+    const   [firstRender,setFirstRender]                    = useState(true);
+    const   [loading,setLoading]                            = useState(true);
+    const   formRef                                         = useRef();
+    const   [productSearhValue,setProductSearhValue]        = useState(searchParams.get('name') ? searchParams.get('name') : '' );
+    const   [productos,setProductos]                        = useState([]);
 
- useEffect(()=>{
-    importJson().then((datos)=>{
-        setProductos(datos)
-        setProductoSeleccionado(datos[0].codigo)
-    })
+    useEffect((e)=>{
+        if (firstRender) {
+            importJson().then((datos)=>{
+                setProductos(datos);
+                setLoading(false);
+            });
+            setFirstRender(false);
+            return;
+        }
+        setProductSearhValue(searchParams.get('name'));
+    },[searchParams])
 
- },[])
- const handleOnProductSelected = (e)=>{
-    navigate(`/product/${productoSeleccionado}`);
- }
- const handleSetProductoSeleccionado = (e)=>{
-    const value = e.currentTarget.value;
-    setProductoSeleccionado(value)
- }
-  return (
-    <>
-    <LocationHeader />
-    <form action="" className='home'>
-        <img src={backgroundImage} alt="background image" />
-        <section>
-            <h1>Busqueda de producto</h1>
-            <select name="nombre" id="nombre" disabled={productos.length > 0? false : true} onChange={handleSetProductoSeleccionado}>
-                {productos.length > 0 ? productos.map((producto)=>{
-                    return <option key={producto.codigo} value={producto.codigo} >{producto.nombre}</option>
-                }) : <option key='-1' value='' disabled>Cargando...</option>}
-            </select>
-            <button type='button' className='primary' onClick={handleOnProductSelected}>VER</button>
-        </section>
-    </form>
-    </>
-  )
+    const handleSalir = (e)=>{
+        navigate('/login')
+    }
+    const HandleSearchInputOnKeyDown = (e)=>{
+        setSearchParams({ name: e.target.value });
+    }
+
+    const productoFiltrados = productos.filter(producto=>{return isTextInProduct(producto, productSearhValue)});
+    return (
+        <>
+        <div className={`home ${productos.length === 0 ? 'loading' : ''}`}>
+            <section>
+                <form ref={formRef}>
+                    <h1>Luxe Couture Co.</h1>
+                    <input type="text" name="searchProductInput" id="searchProductInput" onChange={HandleSearchInputOnKeyDown} value={productSearhValue} autoFocus placeholder='Busca tu nuevo estilo'/>
+                    <button onClick={handleSalir} type='button'>Salir</button>
+                </form>
+                {productoFiltrados.length > 0 && !loading?
+                    <ul>
+                        {productoFiltrados.map(producto=>{
+                            return <ProductSmallCard key={producto.codigo} nombre={producto.nombre} codigo={producto.codigo} precio={producto.precio} imagen={producto.imagen} className={getRandomSizeClassname()} />;
+                        })}
+                    </ul>
+                : <></>}
+
+                {productoFiltrados.length == 0 && !loading?
+                    <div className='imageContainer'>
+                        <img src="./img/noProductFound.jpg" alt="no product found" srcSet="" />
+                    </div>
+                 : <></>}
+                 {loading?
+                    <div className='loader'></div>
+                 : <></>}
+            </section>
+            </div>
+        </>
+    )
 }
 
 export default Home

@@ -57,7 +57,7 @@ form.login input{
         width: 50%;
         min-width: 10rem;
     }
-    form.login img{
+    form.login > img{
         display: none;
     }
 }

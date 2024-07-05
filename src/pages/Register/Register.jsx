@@ -12,7 +12,6 @@ function Register() {
   }
   return (
     <>
-    <LocationHeader />
     <form action="" className='register'>
         <img src={backgroundImage} alt="background image" />
         <section>

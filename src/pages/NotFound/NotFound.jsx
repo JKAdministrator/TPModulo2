@@ -11,7 +11,6 @@ function NotFound() {
   const location = useLocation();
   return (
     <>
-    <LocationHeader />
     <form action="" className='notFound'>
         <img src={backgroundImage} alt="background image" />
         <section>

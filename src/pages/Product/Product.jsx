@@ -36,11 +36,10 @@ function Product() {
     },[])
   return (
     <>
-      <LocationHeader />
-      <form action="" className='product'>
-        <img src={backgroundImage} alt="background image" />
+      <form action="" className='product-page'>
         <ProductCard {...datosProducto} className='productCard'/>
       </form>
+      <button type="button" className='product-page-volver'>Volver</button>
     </>
   )
 }

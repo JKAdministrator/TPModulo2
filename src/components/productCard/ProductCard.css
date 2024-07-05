@@ -1,44 +1,139 @@
-section.productCard {
+*
+{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+}
+a
+{
+    text-decoration: none;
+}
+.product-card {
+    max-width: 380px;
+    position: relative;
+    margin: 50px auto;
+    background: #fafafa;
+}
+
+.badge {
+    position: absolute;
+    left: 0;
+    top: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background: red;
+    color: #fff;
+    padding: 3px 10px;
+    z-index: 1;
+}
+
+.product-tumb {
     display: flex;
-    flex-flow: row;
     align-items: center;
-    justify-content:space-between;
-    background-color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 3px;
-    padding: 1rem;
-    gap: 1rem;
-    flex-wrap: wrap;
-    width: min-content;
+    justify-content: center;
+    height: 300px;
+    background: #f0f0f0;
 }
-section.productCard h1 {
-    width: 100%;
-    text-wrap: nowrap;
+
+.product-tumb img {
+    max-width: 100%;
+    max-height: 100%;
 }
-section.productCard label {
-    width: 40%;
-    text-align:left;
+
+.product-details {
+    padding: 30px;
 }
-section.productCard input {
-    width: 40%;
-    border: none;
+
+.product-catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
 }
-section.productCard textarea {
-    width: 100%;
-    border: none;
-    resize: none;
-    height: max-content;
+
+.product-details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
 }
-section.productCard span#precio {
-    width: 100%;
-    font-size: 2rem;
-    font-weight: bold;
-    border: none;
+
+.product-details h4 a:hover {
+    color: #fbb72c;
 }
-section.productCard span#precio:before {
-    content: '$';
-    content: "\0024";
+
+.product-details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
 }
-section.productCard button {
-    width: 100%;
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.product-bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.product-price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.product-links {
+    text-align: right;
+}
+
+.product-links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.product-links a:hover {
+    color: #fbb72c;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .product-card {
+        max-width: 100%;
+        position: relative;
+        margin: 0px;
+        background: #fafafa;
+        height: 100%;
+    }
+    .badge {
+        left: unset;
+        right: 0;
+    }
 }

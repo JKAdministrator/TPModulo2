@@ -1,7 +1,7 @@
 import React from 'react'
 import './Login.css'
 import { useNavigate } from 'react-router-dom'
-import backgroundImage from '/img/fondoLogin.jpg';
+import backgroundImage from '/img/fondoLogin2.jpg';
 import LocationHeader from '../../components/locationHeader/LocationHeader';
 function Login() {
   const navigate = useNavigate()
@@ -13,7 +13,6 @@ function Login() {
   }
   return (
     <>
-    <LocationHeader />
     <form action="" className='login'>
         <img src={backgroundImage} alt="background image" />
         <section>

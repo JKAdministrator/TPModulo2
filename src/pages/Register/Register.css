@@ -60,7 +60,7 @@ form.register img{
         width: 50%;
         min-width: 10rem;
     }
-    form.register img{
+    form.register > img{
         display: none;
     }
 }

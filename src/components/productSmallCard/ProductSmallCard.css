@@ -1,0 +1,67 @@
+.product {
+    font-family: sans-serif;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: 0.3s;
+    pointer-events: all;
+}
+.product > * {
+    pointer-events: none;
+}
+.product:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.product {
+    min-height: 300px;
+    background-color: teal;
+}
+
+.product.wide {
+    grid-column-end: span 2;
+    background-color: rebeccapurple;
+}
+
+.product.tall {
+    background-color: orange;
+    grid-row-end: span 2;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: lighter;
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    overflow-y: auto;
+    height: max-content;
+    box-sizing: unset;
+    display: flex;
+    padding: 0 0 0 0.2rem;
+}
+
+.product .price {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: right;
+    margin-top: auto;
+    height: max-content;
+}
+.product .price::before {
+    content: "$ ";
+}
+
+.product .imageContainer {
+    height: 70%;
+    width: 100%;
+    background-color: black;
+}
+
+.product .imageContainer > img {
+    object-fit: cover;
+}
