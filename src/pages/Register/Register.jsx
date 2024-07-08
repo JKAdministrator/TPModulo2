@@ -16,8 +16,10 @@ function Register() {
         <img src={backgroundImage} alt="background image" />
         <section>
             <h1>Registro de usuario</h1>
-            <label htmlFor="username">Usuario:</label>
+            <label htmlFor="username">Nombre:</label>
             <input type="text" name="username" id="username" autoComplete='username'/>
+            <label htmlFor="lastname">Apellido:</label>
+            <input type="text" name="lastname" id="lastname" autoComplete='lastname'/>
             <label htmlFor="password">Password:</label>
             <input type="password" name="password" id="password" autoComplete='password'/>
             <label htmlFor="confirm-password">Confirmar password:</label>

@@ -76,7 +76,7 @@ function Home() {
                 {productoFiltrados.length > 0 && !loading?
                     <ul>
                         {productoFiltrados.map(producto=>{
-                            return <ProductSmallCard key={producto.codigo} nombre={producto.nombre} codigo={producto.codigo} precio={producto.precio} imagen={producto.imagen} className={getRandomSizeClassname()} />;
+                            return <ProductSmallCard key={producto.SKU} nombre={producto.nombre} SKU={producto.SKU} precio={producto.precio} imagen={producto.imagen} className={getRandomSizeClassname()} />;
                         })}
                     </ul>
                 : <></>}

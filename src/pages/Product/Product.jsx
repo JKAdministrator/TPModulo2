@@ -17,7 +17,6 @@ const importJson = async ()=>{
 }   
 
 
-
 function Product() {
   const location = useLocation();
   let { id } = useParams();
@@ -28,7 +27,7 @@ function Product() {
   useEffect(()=>{
     importJson().then((datos)=>{
         const datoProducto = datos.find((producto)=>{
-            return producto.codigo == id;
+            return producto.SKU == id;
         })
         if(datoProducto) setDatosProducto(datoProducto)
         else navigate('/404');
@@ -40,7 +39,7 @@ function Product() {
   return (
     <>
       <form action="" className='product-page'>
-        <ProductCard {...datosProducto} className='productCard'/>
+        <ProductCard {...datosProducto} />
       </form>
       <button type="button" className='product-page-volver' onClick={handleVolverClick}>Volver</button>
     </>
