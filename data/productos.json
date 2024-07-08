@@ -6,7 +6,7 @@
         "color":"ROSA",
         "genero":"MUJER",
         "descripcion": "Conjunto deportivo rosa pastel. 100% lana de algodón. No incluye remera.",
-        "codigo": "TXL001",
+        "SKU": "TXL001",
         "imagen":"conjuntoDeportivoMujerRosa.webp",
         "precio": 29.99
     },
@@ -16,7 +16,7 @@
         "genero":"NOMBRE",
         "descripcion": "Pantalon Cargo color crema extra wide importado. 2 bolsillos en cada lateral, 2 bolsillos traseros. Tela 20% Polyester, 80% Algodón.",
         "imagen":"pantalonCargoHombreCrema.webp",
-        "codigo": "TXL002",
+        "SKU": "TXL002",
         "precio": 49.95
     },
     {
@@ -25,7 +25,7 @@
         "genero":"Hombre",
         "descripcion": "Pantalon Cargo color negro extra wide importado. 2 bolsillos en cada lateral, 2 bolsillos traseros. Tela 20% Polyester, 80% Algodón.",
         "imagen":"pantalonCargoHombreNegro.webp",
-        "codigo": "TXL003",
+        "SKU": "TXL003",
         "precio": 39.99
     },
     {
@@ -34,7 +34,7 @@
         "genero":"HOMBRE",
         "descripcion": "Pantalon Cargo color verde importado. 2 bolsillos en cada lateral, 2 bolsillos traseros. Tela 20% Polyester, 80% Algodón.",
         "imagen":"pantalonCargoHombreVerde.jpg",
-        "codigo": "TXL004",
+        "SKU": "TXL004",
         "precio": 9.99
     },
     {
@@ -43,7 +43,7 @@
         "genero":"MUJER",
         "descripcion": "Pantalon Jogging 100% Algodón peinado color gris.",
         "imagen":"pantalonJoggingMujerGris.jpeg",
-        "codigo": "TXL005",
+        "SKU": "TXL005",
         "precio": 49.99
     },
     {
@@ -52,7 +52,7 @@
         "genero":"MUJER",
         "descripcion": "Pantalon Jogging 100% Algodón peinado color rosa.",
         "imagen":"pantalonJoggingMujerRosa.png",
-        "codigo": "TXL006",
+        "SKU": "TXL006",
         "precio": 59.99
     },
     {
@@ -61,7 +61,7 @@
         "genero":"HOMBRE",
         "descripcion": "Remera edicion especial Cuentos de La Cripta 2024",
         "imagen":"remeraHombreCuentosDeLaCripta.jpg",
-        "codigo": "TXL007",
+        "SKU": "TXL007",
         "precio": 69.99
     },
     {
@@ -70,7 +70,7 @@
       "genero":"HOMBRE",
       "descripcion": "Remera edicion especial Volver al Futuro 2023",
       "imagen":"remeraHombreVolverAlFuturo.webp",
-      "codigo": "TXL008",
+      "SKU": "TXL008",
       "precio": 79.95
     },
     {
@@ -79,7 +79,7 @@
       "genero":"MUJER",
       "descripcion": "Remera edicion limitada, Charly Garcia 1987. Algodón 90%, Licra 10%",
       "imagen":"remeraMujerCharlyGarcia.jpg",
-      "codigo": "TXL009",
+      "SKU": "TXL009",
       "precio": 89.99
     },
     {
@@ -88,7 +88,7 @@
       "genero":"MUJER",
       "descripcion": "Remera tv show Kobra KAi Karate Kid 2023",
       "imagen":"remeraMujerKobraKaiKarateKid.jpg",
-      "codigo": "TXL010",
+      "SKU": "TXL010",
       "precio": 99.00
     },
     {
@@ -97,7 +97,7 @@
         "genero":"HOMBRE",
         "descripcion": "Traje ideal para fiestas, casamientos, etc..",
         "imagen":"trajeFiestaHombreAzul.webp",
-        "codigo": "TXL011",
+        "SKU": "TXL011",
         "precio": 115.99
     },
     {
@@ -106,7 +106,7 @@
       "genero":"HOMBRE",
       "descripcion": "Traje importado, ideal para fiestas, casamientos, etc..",
       "imagen":"trajeFiestaHombreBordo.webp",
-      "codigo": "TXL012",
+      "SKU": "TXL012",
       "precio": 108.00
     },
     {
@@ -115,7 +115,7 @@
         "genero":"HOMBRE",
         "descripcion": "Traje ideal para trabajo, reuniones formales",
         "imagen":"trajeHombreNegro.webp",
-        "codigo": "TXL013",
+        "SKU": "TXL013",
         "precio": 118.99
     },
     {
@@ -124,7 +124,7 @@
         "genero":"MUJER",
         "descripcion": "Traje ideal para trabajo, reuniones formales",
         "imagen":"trajeMujerAzul.jpg",
-        "codigo": "TXL014",
+        "SKU": "TXL014",
         "precio": 125.95
     },
     {
@@ -133,7 +133,7 @@
         "genero":"MUJER",
         "descripcion": "Traje importado ideal para fiestas, eventos, etc...",
         "imagen":"vestidoEventoMujerAzul.webp",
-        "codigo": "TXL015",
+        "SKU": "TXL015",
         "precio": 175.95
     },
     {
@@ -142,7 +142,7 @@
         "genero":"MUJER",
         "descripcion": "Traje importado ideal para fiestas, eventos, etc...",
         "imagen":"vestidoFiestaMujerVerde.webp",
-        "codigo": "TXL016",
+        "SKU": "TXL016",
         "precio": 201.95
     },
     {
@@ -151,7 +151,7 @@
         "genero":"MUJER",
         "descripcion": "Traje importado ideal para fiestas, eventos, etc...",
         "imagen":"vestidoGalaMujerBordo.jpg",
-        "codigo": "TXL017",
+        "SKU": "TXL017",
         "precio": 19.95
     }
 ]
