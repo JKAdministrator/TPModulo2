@@ -8,18 +8,28 @@ form.login {
 }
 
 form.login section {
-    width: 20vw;
+    width: 30vw;
+    min-width: 300px;
     height: max-content;
+    min-height: 400px;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    padding: 1rem ;
+    padding: 1rem;
     border: 1px solid whitesmoke;
     gap: 1rem;
     position: absolute;
     background-color: white;
+}
+form.login section .mensajeError{
+    color: red;
+}
+
+form.login section.loading * {
+    pointer-events: none;
+    opacity: 0.8;    
 }
 
 form.login h1{
@@ -39,6 +49,10 @@ form.login input{
     width: 100%;
     text-align: left;
     padding: 0.2rem; 
+}
+
+form.login input.error{
+    border-color: red;
 }
 
 @media only screen and (max-width: 1000px) {
