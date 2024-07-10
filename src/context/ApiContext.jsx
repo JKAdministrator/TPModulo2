@@ -10,7 +10,6 @@ const appData               = {
     messagingSenderId:  import.meta.env.VITE_APP_FIREBASE_MESSAGING_SENDER_ID,
     appId:              import.meta.env.VITE_APP_FIREBASE_APP_ID
 }
-console.log(appData);
 const app                   = initializeApp(appData);
 const db                    = getFirestore(app);
 const coleccionUsuarios     = collection(db, "usuarios");
@@ -45,6 +44,9 @@ export default function ApiProvider({children}){
                             console.log(e);
                             return 'Error al acceder a la base de datos';
                         }
+                    },
+                    logout: async ()=>{
+                       setUser(null);
                     },
                     register: async (nombre, apellido, email, password)=>{
                         try {

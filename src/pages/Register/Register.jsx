@@ -15,10 +15,10 @@ function Register() {
 
   const [isLoading,setIsLoading] = useState(false);
 
-  const [nombre,setNombre]      = useState('diego');
-  const [apellido,setApellido]  = useState('acosta');
-  const [email,setEmail]        = useState('diego@gmail.com');
-  const [password,setPassword]  = useState('12345');
+  const [nombre,setNombre]      = useState('');
+  const [apellido,setApellido]  = useState('');
+  const [email,setEmail]        = useState('');
+  const [password,setPassword]  = useState('');
 
   const [nombreError,setNombreError]      = useState(false);
   const [apellidoError,setApellidoError]  = useState(false);
