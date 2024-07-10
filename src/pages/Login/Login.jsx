@@ -1,4 +1,4 @@
-import React , {useState}from 'react'
+import React , {useEffect, useState}from 'react'
 import './Login.css'
 import { useNavigate } from 'react-router-dom'
 import backgroundImage from '/img/fondoLogin2.jpg';
@@ -6,9 +6,9 @@ import LocationHeader from '../../components/locationHeader/LocationHeader';
 import {useApi} from '../../context/ApiContext.jsx';
 function Login() {
   const navigate = useNavigate();
-  const {API} = useApi();
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
+  const {API, user} = useApi();
+  const [email,setEmail] = useState('julio.kania@gmail.com');
+  const [password,setPassword] = useState('1234');
   const [isLoading,setIsLoading] = useState(false);
   const [mensajeDeError, setMensajeDeError] = useState(null);
 
@@ -38,6 +38,10 @@ function Login() {
   const onPasswordChangeHandler = (e)=>{
     setPassword(e.target.value);
   }
+  useEffect(()=>{
+    if(user) navigate('/home');
+  },[user]);
+
   return (
     <>
     <form action="" className='login'>

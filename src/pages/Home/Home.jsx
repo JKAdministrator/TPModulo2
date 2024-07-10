@@ -1,16 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate, useSearchParams } from "react-router-dom";
-
 import './Home.css'
 import ProductSmallCard from '../../components/productSmallCard/ProductSmallCard';
-const importJson = async ()=>{
-    const response = await fetch('data/productos.json',{headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      }})
-    const datos  = await response.json();
-    return datos
-}   
+import { useApi } from '../../context/ApiContext';
+import UserMenu from '../../components/userMenu/UserMenu';
 
 const isTextInProduct = (producto, valorABuscar)=>{
     const encontrado = producto.nombre.toUpperCase().search(valorABuscar.toUpperCase());
@@ -34,31 +27,31 @@ const getRandomSizeClassname = (index)=>{
     }
 }
 
-
 function Home() {
-    const navigate = useNavigate();
-    const   [searchParams, setSearchParams]                 = useSearchParams();
-    const   [firstRender,setFirstRender]                    = useState(true);
-    const   [loading,setLoading]                            = useState(true);
-    const   formRef                                         = useRef();
-    const   [productSearhValue,setProductSearhValue]        = useState(searchParams.get('name') ? searchParams.get('name') : '' );
-    const   [productos,setProductos]                        = useState([]);
-
+    const   navigate                                    = useNavigate();
+    const   [searchParams, setSearchParams]             = useSearchParams();
+    const   [firstRender,setFirstRender]                = useState(true);
+    const   [loading,setLoading]                        = useState(true);
+    const   formRef                                     = useRef();
+    const   [productSearhValue,setProductSearhValue]    = useState(searchParams.get('name') ? searchParams.get('name') : '' );
+    const   [productos,setProductos]                    = useState([]);
+    const   {user, API}                                 = useApi();
     useEffect((e)=>{
         if (firstRender) {
-            importJson().then((datos)=>{
-                setProductos(datos);
+            API.getProducts().then(e=>{
+                setProductos(e);
                 setLoading(false);
-            });
-            setFirstRender(false);
+                setFirstRender(false);
+            }).catch(e=>{
+                console.error(e);
+                setFirstRender(false);
+            })
             return;
         }
         setProductSearhValue(searchParams.get('name'));
     },[searchParams])
 
-    const handleSalir = (e)=>{
-        navigate('/login')
-    }
+
     const HandleSearchInputOnKeyDown = (e)=>{
         setSearchParams({ name: e.target.value });
     }
@@ -66,12 +59,12 @@ function Home() {
     const productoFiltrados = productos.filter(producto=>{return isTextInProduct(producto, productSearhValue)});
     return (
         <>
+        <UserMenu />
         <div className={`home ${productos.length === 0 ? 'loading' : ''}`}>
             <section>
                 <form ref={formRef}>
                     <h1>Luxe Couture Co.</h1>
                     <input type="text" name="searchProductInput" id="searchProductInput" onChange={HandleSearchInputOnKeyDown} value={productSearhValue} autoFocus placeholder='Busca tu nuevo estilo'/>
-                    <button onClick={handleSalir} type='button'>Salir</button>
                 </form>
                 {productoFiltrados.length > 0 && !loading?
                     <ul>

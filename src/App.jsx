@@ -3,13 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import {Login,Product, Register, Home, NotFound} from './pages/index'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import { useApi } from './context/ApiContext'
 
 function App() {
 
-  const {loading, error, API} = useApi();
-  
+  const {user, loading, error, API} = useApi();
 
   return loading ? <></> : 
       <BrowserRouter basename="/TPModulo2">

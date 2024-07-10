@@ -1,0 +1,7 @@
+.userMenu {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1;
+    border: 1px solid #00000063;
+}

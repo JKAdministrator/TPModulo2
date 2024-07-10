@@ -53,12 +53,13 @@ a
 }
 
 .product-catagory {
-    display: block;
+    display: inline-block;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     color: #ccc;
     margin-bottom: 18px;
+    padding: 0rem 1rem;
 }
 
 .product-details h4 a {

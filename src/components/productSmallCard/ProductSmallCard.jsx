@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 function ProductSmallCard({nombre,SKU, precio, imagen, className }) {
     const navigate = useNavigate();
     const handleProductOnClick = (e)=>{
-        console.log('handleProductOnClick()',{SKU});
         navigate(`/product/${SKU}`);
     }
   return (
