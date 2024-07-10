@@ -16,7 +16,7 @@ function Product() {
     API.getProduct(id).then(e=>{ e? setDatosProducto(e) : navigate('/404'); }).catch(e=>{ navigate('/404'); });
   }, []);
 
-  const handleVolverClick = (e)=>{ API.logout(); }
+  const handleVolverClick = (e)=>{ navigate('/home'); }
 
   return (
     <>
